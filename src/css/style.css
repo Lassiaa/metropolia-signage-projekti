@@ -11,7 +11,17 @@
 
 #main {
     margin: auto;
+    background-color: bisque; height: 100vh;
 }
+
+#media {
+    background-color: var(--secondaryRed);
+}
+
+#info {
+    background-color: var(--trendGreen);
+}
+
 
 #left {
     margin: 0px !important; 
@@ -23,8 +33,20 @@
     padding: 0px !important;
 }
 
+#food {
+    background-color: var(--secondaryYellow);
+}
+
 #transport {
     padding: 0px !important;
+}
+
+#bus {
+    background-color: var(--trendLightBlue);
+}
+
+#train {
+    background-color: var(--secondaryBlue);
 }
 
 h2 {
