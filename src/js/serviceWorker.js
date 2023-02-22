@@ -12,7 +12,12 @@ const assets = [
   "/assets/metropolia_s_orange.png",
 ]
 
-//Check the assets and give an error if file is not found
+/**
+ * Push assets to cache
+ * Give an error if a file is not found
+ * @param {*} cache 
+ * @returns promise of assets
+ */
 const filesUpdate = cache => {
     const stack = [];
     assets.forEach(file => stack.push(
