@@ -8,3 +8,25 @@
     --trendLightBlue: #5db1e4;
     --trendGreen: #3ba88f;
 }
+
+#main {
+    margin: auto;
+}
+
+#left {
+    margin: 0px !important; 
+    padding: 0px !important;
+}
+
+#right {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#transport {
+    padding: 0px !important;
+}
+
+h2 {
+    text-align: center;
+}
