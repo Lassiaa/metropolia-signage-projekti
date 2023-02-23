@@ -16,10 +16,14 @@
 
 #media {
     background-color: var(--secondaryRed);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
 }
 
 #info {
     background-color: var(--trendGreen);
+    align-content: center;
 }
 
 
