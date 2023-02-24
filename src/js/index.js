@@ -1,24 +1,19 @@
-import {doFetch} from './network';
+'use strict';
 
-(async () => {
-  // get sodexo data example (iife)
-  try {
-    const menuData = await doFetch(
-      'https://www.sodexo.fi/ruokalistat/output/weekly_json/152'
-    );
-    console.log('myrtsin menu', menuData);
-  } catch (error) {
-    // tehdään jotain jos virhe doFethiltä
-    console.log('menu ei saatavilla');
+const info = ['moi täs tiedote',
+  'toinen tiedote',
+  'testi',
+  'toimiiks tää',
+];
+
+const render = (target) => {
+  const infoList = document.querySelector('#info-list');
+  for (const i of target) {
+    console.log(i);
+    const li = document.createElement('li');
+    li.textContent = i;
+    infoList.append(li);
   }
-  // get foodco menu
-  try {
-    const menuData = await doFetch(
-      'https://www.compass-group.fi/menuapi/feed/json?costNumber=3208&language=en',
-      true
-    );
-    console.log('karaportin menu', menuData);
-  } catch (error) {
-    // do something
-  }
-})();
+};
+
+render(info);
