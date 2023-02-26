@@ -1,5 +1,22 @@
-{
-    "id": 1,
-    "title": "Moi tässä tiedote"
-}
-
+[
+    {
+        "id": 1,
+        "title": "Moi tässä EKA tiedote"
+    },
+    {
+        "id": 2,
+        "title": "Moi tässä tiedote 2"
+    },
+    {
+        "id": 3,
+        "title": "Moi tässä jo tiedote 3!"
+    },
+    {
+        "id": 4,
+        "title": "ja vielä neljäs."
+    },
+    {
+        "id": 5,
+        "title": "toimii!!!!!"
+    }
+]
