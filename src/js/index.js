@@ -1,7 +1,10 @@
 'use strict';
 
 // polku info.json-tiedostoon: '../src/assets/info.json'
-
+/**
+ * 
+ * @returns json-tiedoston sisällön
+ */
 async function getInfo() {
   let url = '../src/assets/info.json';
   try {
@@ -12,6 +15,9 @@ async function getInfo() {
   }
 }
 
+/**
+ * tulostaa json-tiedoston sisällön "tiedotteet"-osioon
+ */
 async function renderInfo() {
   let info = await getInfo();
   let html = '';
