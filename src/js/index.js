@@ -6,6 +6,7 @@
  * @returns json-tiedoston sisällön
  */
 async function getInfo() {
+  //let url = '../src/assets/info.json';
   let url = '../src/assets/info.json';
   try {
     let res = await fetch(url);
