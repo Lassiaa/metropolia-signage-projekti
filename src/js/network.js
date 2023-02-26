@@ -12,6 +12,7 @@
  * @param {object} options - Fetch options
  * @returns JSON data
  */
+/**
 const doFetch = async (url, useProxy = false, options) => {
     if (useProxy) {
       url = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
@@ -28,3 +29,4 @@ const doFetch = async (url, useProxy = false, options) => {
 };
 
 export {doFetch};
+*/
