@@ -1,5 +1,5 @@
 //Check if service worker is supported by browser
-//Listen to page load event and register service worke
+//Listen to page load event and register service worker
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
