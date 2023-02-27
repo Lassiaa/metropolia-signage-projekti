@@ -9,6 +9,7 @@ const coreAssets = [
   "./js/index.js",
   "./js/info.js",
   "./js/network.js",
+  "./js/ruokalistadata.js",
   "./assets/info.json",
   "./assets/Dia1.JPG",
   "./assets/Dia3.JPG",
