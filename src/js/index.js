@@ -5,6 +5,10 @@ let currentDate = new Date().toISOString().slice(0, 10)
 
 // async-funktoilla tehty:
 
+/**
+ * 
+ * @returns ruokalistan sisällön apista
+ */
 async function getFood() {
   let url = `https://www.sodexo.fi/ruokalistat/output/daily_json/158/${currentDate}`;
   try {
@@ -15,6 +19,9 @@ async function getFood() {
   }
 }
 
+/**
+ * tulostaa ruokalistan sisällön "ruokalista"-osioon
+ */
 async function renderFood() {
   let food = await getFood();
   let html = '';
