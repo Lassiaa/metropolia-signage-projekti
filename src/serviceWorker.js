@@ -37,6 +37,7 @@ self.addEventListener("install", e => {
 	);
 });
 
+
 /**
  * Listen for request events
  */
