@@ -31,7 +31,11 @@ const renderFood = (menu, order = 'asc') => {
     console.log(coursesFi);
 };
 
+/*
 module.exports = {
     renderFood,
     
 }
+*/
+
+export {renderFood};

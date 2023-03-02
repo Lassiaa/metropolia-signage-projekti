@@ -33,6 +33,10 @@ async function renderInfo() {
     container.innerHTML = html;
 }
 
+/*
 module.exports = {
     renderInfo,
 }
+*/
+
+export {renderInfo};

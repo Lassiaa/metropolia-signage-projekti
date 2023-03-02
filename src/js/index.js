@@ -1,8 +1,7 @@
 'use strict';
 
+import {renderInfo} from './info.js';
+import {renderFood} from './food.js';
 
-const info = require('./info');
-const food = require('./food');
-
-info.renderInfo();
-food.renderFood();
+renderInfo();
+renderFood();

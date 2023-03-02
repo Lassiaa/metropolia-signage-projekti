@@ -11,7 +11,8 @@
 
 #main {
     margin: auto;
-    background-color: bisque; height: 100vh;
+    background-color: bisque;
+    height: 100vh;
 }
 
 #media {
@@ -19,31 +20,46 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
 #info {
     background-color: var(--trendGreen);
     align-content: center;
+    -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
 
 #left {
-    margin: 15px; 
+    margin: 15px;
     padding: 0px !important;
 }
 
 #right {
-    margin: 15px; 
+    margin: 15px;
     padding: 0px !important;
 }
 
 #food {
     background-color: var(--secondaryYellow);
+    margin-bottom: 35px;
+    -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
 #transport {
     padding: 0px !important;
     border: 2px solid black;
+    height: 300px;
+    -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
 #bus {
@@ -56,4 +72,4 @@
 
 h2 {
     text-align: center;
-} 
+}
