@@ -28,12 +28,12 @@
 
 
 #left {
-    margin: 0px !important; 
+    margin: 15px; 
     padding: 0px !important;
 }
 
 #right {
-    margin: 0px !important;
+    margin: 15px; 
     padding: 0px !important;
 }
 
@@ -43,6 +43,7 @@
 
 #transport {
     padding: 0px !important;
+    border: 2px solid black;
 }
 
 #bus {
