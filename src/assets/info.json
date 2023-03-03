@@ -1,22 +1,27 @@
 [
     {
         "id": 1,
-        "title": "Moi tässä EKA tiedote"
+        "title": "EKA tiedote",
+        "text": "Moi tässä EKA tiedote"
     },
     {
         "id": 2,
-        "title": "Moi tässä tiedote 2"
+        "title": "tiedote 2",
+        "text": "Moi tässä tiedote 2"
     },
     {
         "id": 3,
-        "title": "Moi tässä jo tiedote 3!"
+        "title": "jo kolmas tiedote",
+        "text": "Moi tässä jo tiedote 3!"
     },
     {
         "id": 4,
-        "title": "ja vielä neljäs."
+        "title": "4. tiedote",
+        "text": "ja vielä neljäs."
     },
     {
         "id": 5,
-        "title": "toimii!!!!!"
+        "title": "toimiiko?",
+        "text": "toimii!!!!!"
     }
 ]

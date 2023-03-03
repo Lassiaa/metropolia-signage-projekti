@@ -27,15 +27,24 @@ async function renderInfo() {
     const infoText = JSON.parse(info.contents);
 
     for (let i in infoText) {
+        /*
         let htmlSegment = `<li>
         ${infoText[i].title}
         </li>`;
+        */
+
+        let htmlSegment = ` <div class="carousel-item">
+        <div class="container info-card">
+            <h3>${infoText[i].title}</h3>
+            <p>${infoText[i].text}</p>
+        </div>
+    </div>`
 
         html += htmlSegment;
     }
 
     let container = document.querySelector('#info-list');
-    container.innerHTML = html;
+    container.innerHTML += html;
 }
 
 export {renderInfo};

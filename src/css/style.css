@@ -57,6 +57,12 @@ body {
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
+.info-card {
+    padding: 5px;
+    background-color: bisque;
+    text-align: center;
+}
+
 #left {
     margin: 15px;
     padding: 0px !important;
