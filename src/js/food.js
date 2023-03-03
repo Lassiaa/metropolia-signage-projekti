@@ -24,6 +24,11 @@ getFood().then((data) => {
         html += `<li>${courses[i].title_fi}</li>`
     }
     foodContainer.innerHTML += html;
+    let title = document.querySelector('#food-title');
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.toLocaleDateString('default', { month: 'long'});
+    title.innerHTML = `ruokalista tänään ${day}. ${month}ta`;
 });
 
 const renderFood = (menu, order = 'asc') => {
