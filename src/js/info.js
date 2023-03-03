@@ -43,7 +43,7 @@ async function renderInfo() {
         html += htmlSegment;
     }
 
-    let container = document.querySelector('#info-list');
+    let container = document.querySelector('#info-carousel');
     container.innerHTML += html;
 }
 
