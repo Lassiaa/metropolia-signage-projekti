@@ -4,43 +4,36 @@ let currentDate = new Date().toISOString().slice(0, 10)
 
 const getFood = async () => {
     try {
-        const url = `https://www.sodexo.fi/ruokalistat/output/daily_json/158/${currentDate}`;
-        const res = await fetch(url);
+        const url = `https://www.compass-group.fi/menuapi/week-menus?costCenter=3208&date=${currentDate}T16%3A08%3A11.953Z&language=fi`;
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+        const res = await fetch(proxyUrl);
         console.log(res.ok);
         const data = await res.json();
+        console.log(data)
         return (data);
     } catch (err) {
         console.error(err)
     }
 };
 
-getFood().then((data) => {
-
-    let courses = data.courses;
-    let size = Object.keys(courses).length;
-    let html = "";
-    let foodContainer = document.querySelector('#food-list');
-    for (let i = 1; i <= size; i++) {
-        html += `<li>${courses[i].title_fi}</li>`
-    }
-    foodContainer.innerHTML += html;
-    let title = document.querySelector('#food-title');
+const renderFood = async () => {
+    // päivämääräjutut
     const date = new Date();
     let day = date.getDate();
-    let month = date.toLocaleDateString('default', { month: 'long'});
-    title.innerHTML = `ruokalista tänään ${day}. ${month}ta`;
-});
+    let month = date.getMonth();
+    let monthText = date.toLocaleDateString('default', { month: 'long'});
 
-const renderFood = (menu, order = 'asc') => {
-    console.log(coursesEn);
-    console.log(coursesFi);
+    let food = await getFood();
+    // food.contents on PIHVI
+    console.log(food.contents);
+
+
+    // TÄHÄN ruokalistan tulostaminen ruokalista-osioon
+
+
+    // ruoka-osion otsikko
+    let title = document.querySelector('#food-title');
+    title.innerHTML = `ruokalista tänään ${day}. ${monthText}ta`;
 };
-
-/*
-module.exports = {
-    renderFood,
-    
-}
-*/
 
 export {renderFood};
