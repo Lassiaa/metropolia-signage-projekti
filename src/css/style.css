@@ -23,9 +23,15 @@
     font-display: swap;
 }
 
+body {
+    background-image: url(https://www.metropolia.fi/sites/default/files/images/Uutiset/csm_KaramalmiUlkoKesakuu2019koko775x421_4e63b2fb25.jpg);
+    background-size: cover;
+    backdrop-filter: blur(4px);
+}
+
 #main {
     margin: auto;
-    background-color: bisque;
+    /*background-color: bisque;*/
     height: 100vh;
 }
 
@@ -34,8 +40,9 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     background-color: white;
+    min-height: 52%;
     -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
@@ -64,7 +71,7 @@
     background-color: var(--secondaryYellow);
     margin-bottom: 35px;
     background-color: white;
-
+    min-height: 52%;
     -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);

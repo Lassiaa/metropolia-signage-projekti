@@ -19,7 +19,7 @@ getFood().then((data) => {
     let courses = data.courses;
     let size = Object.keys(courses).length;
     let html = "";
-    let foodContainer = document.querySelector('#food');
+    let foodContainer = document.querySelector('#food-list');
     for (let i = 1; i <= size; i++) {
         html += `<li>${courses[i].title_fi}</li>`
     }
