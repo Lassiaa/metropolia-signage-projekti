@@ -3,7 +3,7 @@
  * 
  * @returns json-tiedoston sisällön
  */
-async function getInfo() {
+const getInfo = async () => {
     //let url = '../src/assets/info.json';
     //let url = '../src/assets/info.json';
     let url = 'https://users.metropolia.fi/~onnif/info.json';
@@ -20,7 +20,7 @@ async function getInfo() {
 /**
  * tulostaa json-tiedoston sisällön "tiedotteet"-osioon
  */
-async function renderInfo() {
+const renderInfo = async () => {
     let info = await getInfo();
     let html = '';
 
