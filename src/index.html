@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metropolia Karamalmin Kampus</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 992px)">
     <link rel="icon" href="assets/icons/icon-256x256.png">
     <link rel="apple-touch-icon" href="assets/icons/icon-256x256.png">
     <link rel="manifest" href="manifest.webmanifest" />
@@ -27,6 +28,12 @@
 
 <body>
     <div class="container-fluid d-flex" id="main">
+        <nav class="navbar navbar-light bg-light w-100" id="nav-bar">
+            <a class="navbar-brand" href="#">
+              <img src="/src/assets/metropolia_s_orange.png" height="30" class="d-inline-block align-top" alt="">
+            </a>
+            <h3>Karamalmi</h3>
+          </nav>
         <div class="container" id="left">
             <div class="container d-flex" id="media">
                 <div class="container d-flex p-2" id="title" style="background-color: antiquewhite;">
@@ -53,7 +60,6 @@
                 </div>
             </div>
             <div class="container h-25" id="info">
-                <h2>tiedotteita</h2>
                 <div id="info-list">
                     <div class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner" id="info-carousel">
