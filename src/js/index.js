@@ -8,4 +8,4 @@ renderFood();
 
 const infoRefresh = window.setInterval(() => {
     renderInfo();
-}, 3600000);
+}, 5000);
