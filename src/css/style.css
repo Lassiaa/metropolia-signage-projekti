@@ -57,6 +57,24 @@ body {
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
 }
 
+#weather-card {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #136ab9, #0087ce, #00a3dd, #00bee6, #12d9eb);
+}
+
+#weather-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#weather-additional {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #left {
     margin: 15px;
     padding: 0px !important;
