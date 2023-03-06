@@ -9,11 +9,12 @@ import {renderHslData} from './hsl.js';
 renderInfo();
 renderFood();
 renderHslData();
+renderWeather();
 
 const dataRefresh = window.setInterval(() => {
     renderFood();
     renderWeather();
-}, 3600000);
+}, 50000);
 
 const infoRefresh = window.setInterval(() => {
     renderInfo();
