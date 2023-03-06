@@ -2,6 +2,7 @@
 
 import {renderInfo} from './info.js';
 import {renderFood} from './food.js';
+import {renderWeather} from './weather.js';
 import {renderHslData} from './hsl.js';
 
 
@@ -9,10 +10,10 @@ renderInfo();
 renderFood();
 renderHslData();
 
-const foodRefresh = window.setInterval(() => {
+const dataRefresh = window.setInterval(() => {
     renderFood();
-}, 50000);
-
+    renderWeather();
+}, 3600000);
 
 const infoRefresh = window.setInterval(() => {
     renderInfo();
