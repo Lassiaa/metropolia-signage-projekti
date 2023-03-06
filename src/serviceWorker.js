@@ -19,7 +19,7 @@ const coreAssets = [
   "./assets/icons/icon-64x64.png",
   "./assets/icons/icon-128x128.png",
   "./assets/icons/icon-256x256.png",
-  "./assets/icons/icon-512x512.png",
+  // "./assets/icons/icon-512x512.png",
 ]
 
 /**

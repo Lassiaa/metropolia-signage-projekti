@@ -59,7 +59,6 @@ const getHslData = async () => {
  */
 const renderHslData = async () => {
     const hslData = await getHslData();
-    console.log(hslData)
     const hslArray = [];
     const enoughTimeArray = [];
     let text = '';
@@ -93,7 +92,6 @@ const renderHslData = async () => {
             hslArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
 
             // Don't show busses that are coming in under 4 minutes so user has time to walk to the stop
-            console.log(Math.abs(seconds - busArrival));
             if (Math.abs(seconds - busArrival) > 240) {
               enoughTimeArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
             }
