@@ -16,31 +16,29 @@ const getFood = async () => {
 };
 
 const renderFood = async () => {
-    // päivämääräjutut
+    let title = document.querySelector('#food-title');
+    let food = document.querySelector('#food-list');
+    //Tulostetaan ruokalista artikkelin otsikko, jossa näkyy päivämäärä.
     const date = new Date();
     let day = date.getDate();
     let month = date.getMonth();
     let monthText = date.toLocaleDateString('default', { month: 'long'});
-    
+    title.innerHTML = `Ruokalista tänään ${day}. ${monthText}ta`;
+    food.innerHTML = '';
+    food.title = '';
+    let text = '';
+    // Fetchataan ja tulostetaan sivulle päivän ruokalista.
     const obj = await getFood();
     const obj2 = JSON.parse(obj.contents);
     const ruokalista = obj2.MenusForDays[0].SetMenus;
-    let text = '';
     for(let i = 0; i < ruokalista.length; i++){
         for (let j = 0; j < ruokalista[i].Components.length; j++) {
         text += `<li>${ruokalista[i].Components[j]}</li><br>`;
         }
     }
-
-    let food = document.querySelector('#food');
     food.innerHTML += text;
-
-    
-    
     // TÄHÄN ruokalistan tulostaminen ruokalista-osioon
     // ruoka-osion otsikko
-    let title = document.querySelector('#food-title');
-    title.innerHTML = `ruokalista tänään ${day}. ${monthText}ta`;
 };
 
 export {renderFood};
