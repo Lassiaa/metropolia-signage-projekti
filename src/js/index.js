@@ -12,3 +12,8 @@ renderHslData();
 const foodRefresh = window.setInterval(() => {
     renderFood();
 }, 50000);
+
+
+const infoRefresh = window.setInterval(() => {
+    renderInfo();
+}, 50000);

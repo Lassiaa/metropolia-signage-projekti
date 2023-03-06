@@ -30,16 +30,25 @@ body {
 }
 
 #nav-bar {
-    display: none !important;
+    display: flex !important;
+    justify-content: flex-start;
 }
+
 
 #main {
     margin: auto;
-    /*background-color: bisque;*/
     height: 100vh;
+    flex-direction: column !important;
+    align-items: center;
+}
+
+#title {
+    flex-direction: column;
 }
 
 #media {
+    display: none !important;
+
     background-color: var(--secondaryRed);
     flex-direction: column;
     justify-content: flex-start;
