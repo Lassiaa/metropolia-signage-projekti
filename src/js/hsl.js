@@ -1,37 +1,30 @@
+'use strict';
+
 const getHslData = async () => {
     const query = `
         query {
-            nearest(lat: 60.22420814321587, lon: 24.758717219253274, maxDistance: 500, filterByPlaceTypes: DEPARTURE_ROW) {
-                edges {
-                  node {
-                    place {
-                      ... on DepartureRow {
-                        stop {
-                          lat
-                          lon
-                          name
-                        }
-                        stoptimes {
-                          serviceDay
-                          scheduledDeparture
-                          realtimeDeparture
-                          trip {
-                            route {
-                              shortName
-                              longName
-                            }
-                          }
-                          headsign
-                        }
-                      }
-                    }
-                    distance
-                  }
+          stops(name: "Karanristi Karamalmens") {
+            name
+            code
+            stoptimesWithoutPatterns(numberOfDepartures: 5) {
+              realtimeArrival
+              scheduledArrival
+              arrivalDelay
+              realtime
+              realtimeState
+              serviceDay
+              headsign
+              trip {
+                  route {
+                  shortName
+                  longName
                 }
+              }
             }
+          }
         }
     `;
-    
+
     try {
         const apiUrl = "https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql";
         const res = await fetch(apiUrl, {
@@ -53,27 +46,42 @@ const getHslData = async () => {
 
 const renderHslData = async () => {
     const hslData = await getHslData();
+    console.log(hslData);
+
+    const hslArray = [];
     let text = '';
 
-    for (let i = 0; i < hslData.data.nearest.edges.length && i <= 5; i++) {
-        if (hslData.data.nearest.edges[i].node.place.stoptimes.length > 0) {
-            const distance = JSON.stringify(hslData.data.nearest.edges[i].node.distance + "m").replace(/"/g, '');
-            const busStop = JSON.stringify(hslData.data.nearest.edges[i].node.place.stop.name).replace(/"/g, '');
-            const busName = JSON.stringify(hslData.data.nearest.edges[i].node.place.stoptimes[0].headsign).replace(/"/g, '');
-            const busNum = JSON.stringify(hslData.data.nearest.edges[i].node.place.stoptimes[0].trip.route.shortName).replace(/"/g, '');
-            const busTime = JSON.stringify(hslData.data.nearest.edges[i].node.place.stoptimes[0].scheduledDeparture);
+    let container = document.querySelector('#hsl-data');
+    container.innerHTML = text;
 
-            // Converting seconds to hh mm ss
-            const date = new Date(null);
-            date.setSeconds(busTime); 
-            const hhmmssFormat = date.toLocaleTimeString();
-            const hhmmFormat = hhmmssFormat.substring(0, hhmmssFormat.length-3)
+    for (let stop = 0; stop < hslData.data.stops.length; stop++) {
+        const busStopName = JSON.stringify(hslData.data.stops[stop].name).replace(/"/g, '');
+        const busStopCode = JSON.stringify(hslData.data.stops[stop].code).replace(/"/g, '');
 
-            text += `<li>` + busNum + ` ` + busName + ` ` + busStop + ` ` + distance + ` klo. ` + hhmmFormat + `</li><br>`;
+        for (let bus = 0; bus < hslData.data.stops[stop].stoptimesWithoutPatterns.length; bus++) {
+          const busName = JSON.stringify(hslData.data.stops[stop].stoptimesWithoutPatterns[bus].headsign).replace(/"/g, '');
+          const busNum = JSON.stringify(hslData.data.stops[stop].stoptimesWithoutPatterns[bus].trip.route.shortName).replace(/"/g, '');
+          const busArrival = JSON.stringify(hslData.data.stops[stop].stoptimesWithoutPatterns[bus].realtimeArrival);
+
+          // Converting seconds to utc time and converting to desired format
+          const dateUTC  = new Date(null);
+          dateUTC .setUTCSeconds(busArrival); 
+          const [dayOfTheWeek, date, month, year, hour, min, sec] = dateUTC.toUTCString().split(/:| /);
+          const desiredTimeFormat = `${hour}:${min}`;
+
+          hslArray.push('klo.' + desiredTimeFormat + ', ' + busStopName + ', ' + busStopCode + ', ' + busNum + ', ' + busName)
+
         }
     }
 
-    let container = document.querySelector('#hsl-data');
+    hslArray.sort();
+
+    for (let i = 0; i < hslArray.length && i < 5; i++) {
+      text += `<li>` + hslArray[i] + `</li><br>`;
+    }
+
+    console.log(hslArray);
+
     container.innerHTML += text;
 };
 
