@@ -11,11 +11,18 @@ renderFood();
 renderHslData();
 renderWeather();
 
+// Get new menu and weather data every 50s
 const dataRefresh = window.setInterval(() => {
     renderFood();
     renderWeather();
 }, 50000);
 
+// Get new info data every 50s
 const infoRefresh = window.setInterval(() => {
     renderInfo();
 }, 50000);
+
+// Get new HSL data every 5s
+const hslRefresh = window.setInterval(() => {
+    renderHslData();
+}, 5000);

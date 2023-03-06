@@ -15,8 +15,8 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <script>
-        // check broser support
-        // register serviceWorker
+        // check broser support and register serviceWorker
+        // This is done in script tags and not in a separate file so it would be done asap
         if (navigator && navigator.serviceWorker) {
             navigator.serviceWorker.register('serviceWorker.js');
             console.log("Application registered");
@@ -99,13 +99,9 @@
             </div>
             <div class="container d-flex" id="transport">
                 <div class="container" id="bus">
-                    <h2>bussit</h2>
-                    <div id="hsl-data">
-                    </div>
+                    <h2>Bussi Aikataulut</h2>
+                    <div id="hsl-data"></div>
                 </div>
-                <!-- <div class="container" id="train">
-                    <h2>junat</h2>
-                </div> -->
             </div>
         </div>
     </div>
