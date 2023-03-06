@@ -90,12 +90,12 @@ const renderHslData = async () => {
             const [dayOfTheWeek, date, month, year, hour, min, sec] = dateUTC.toUTCString().split(/:| /);
             const desiredTimeFormat = `${hour}:${min}`;
 
-            hslArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + ', ' + busStopName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
+            hslArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
 
             // Don't show busses that are coming in under 4 minutes so user has time to walk to the stop
             console.log(Math.abs(seconds - busArrival));
             if (Math.abs(seconds - busArrival) > 240) {
-              enoughTimeArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + ', ' + busStopName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
+              enoughTimeArray.push(desiredTimeFormat + `<br>` + '<strong>Bussi: </strong>' + busNum + ', ' + busName + `<br>` + '<strong>Pysäkki: </strong>' + busStopCode + ', ' + busStopName);
             }
         }
     }
