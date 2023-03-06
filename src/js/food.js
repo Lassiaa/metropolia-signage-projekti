@@ -37,8 +37,6 @@ const renderFood = async () => {
         }
     }
     food.innerHTML += text;
-    // TÄHÄN ruokalistan tulostaminen ruokalista-osioon
-    // ruoka-osion otsikko
 };
 
 export {renderFood};
