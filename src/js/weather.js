@@ -27,10 +27,19 @@ const renderWeather = async () => {
     let humidity = Math.round(obj.days[0].hours[hour].humidity) / 1;
     let windspeed = Math.round(obj.days[0].hours[hour].windspeed * 0.3048) / 1;
     let weather = obj.days[0].hours[hour].conditions;
-    tempDiv.innerHTML = `${temp}°C`;
-    humidityDiv.innerHTML = `💧 ${humidity}%`;
-    windspeedDiv.innerHTML = `💨 ${windspeed}m/s`;
-    weatherDiv.innerHTML = weather;
+
+    const weatherCard = document.querySelector('#weather-card');
+
+    weatherCard.innerHTML = `<div id="weather-main">
+    <h4>Espoo</h4>
+    <h3 id="weather-temp" style="font-size: 2.3rem">${temp}°C</h3>
+    <h5 id="weather-weather">${weather}</h5>
+</div>
+<div id="weather-additional">
+    <p id="weather-windspeed" style="font-size: 1.3rem">💨 ${windspeed}m/s</p>
+    <p id="weather-humidity" style="font-size: 1.3rem">💧 ${humidity}%</p>
+</div>`
+
 };
 
 export {renderWeather};
