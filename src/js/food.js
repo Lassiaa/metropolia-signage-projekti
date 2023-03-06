@@ -17,26 +17,26 @@ const getFood = async () => {
 
 const renderFood = async () => {
     let title = document.querySelector('#food-title');
-    let food = document.querySelector('#food-list');
+    let foodList = document.querySelector('#food-list');
     //Tulostetaan ruokalista artikkelin otsikko, jossa näkyy päivämäärä.
     const date = new Date();
     let day = date.getDate();
     let month = date.getMonth();
     let monthText = date.toLocaleDateString('default', { month: 'long'});
     title.innerHTML = `Ruokalista tänään ${day}. ${monthText}ta`;
-    food.innerHTML = '';
-    food.title = '';
+    foodList.innerHTML = '';
+    foodList.title = '';
     let text = '';
     // Fetchataan ja tulostetaan sivulle päivän ruokalista.
-    const obj = await getFood();
-    const obj2 = JSON.parse(obj.contents);
-    const ruokalista = obj2.MenusForDays[0].SetMenus;
-    for(let i = 0; i < ruokalista.length; i++){
-        for (let j = 0; j < ruokalista[i].Components.length; j++) {
-        text += `<li>${ruokalista[i].Components[j]}</li><br>`;
+    const food = await getFood();
+    const foodContent = JSON.parse(food.contents);
+    const menu = foodContent.MenusForDays[0].SetMenus;
+    for(let i = 0; i < menu.length; i++){
+        for (let j = 0; j < menu[i].Components.length; j++) {
+        text += `<li>${menu[i].Components[j]}</li><br>`;
         }
     }
-    food.innerHTML += text;
+    foodList.innerHTML += text;
 };
 
 export {renderFood};
