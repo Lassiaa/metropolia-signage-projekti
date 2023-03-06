@@ -8,3 +8,8 @@ import {renderHslData} from './hsl.js';
 renderInfo();
 renderFood();
 renderHslData();
+
+const foodRefresh = window.setInterval(() => {
+    renderFood();
+}, 3600000);
+foodRefresh();
