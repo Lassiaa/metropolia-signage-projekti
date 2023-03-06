@@ -8,6 +8,7 @@ renderInfo();
 renderFood();
 renderWeather();
 
-const foodRefresh = window.setInterval(() => {
+const dataRefresh = window.setInterval(() => {
     renderFood();
+    renderWeather();
 }, 3600000);
