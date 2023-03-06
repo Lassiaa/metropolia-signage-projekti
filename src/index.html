@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metropolia Karamalmin Kampus</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 992px)">
     <link rel="icon" href="assets/icons/icon-256x256.png">
     <link rel="apple-touch-icon" href="assets/icons/icon-256x256.png">
     <link rel="manifest" href="manifest.webmanifest" />
@@ -15,26 +14,19 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <script>
-        // check broser support
-        // register serviceWorker
+        // check broser support and register serviceWorker
+        // This is done in script tags and not in a separate file so it would be done asap
         if (navigator && navigator.serviceWorker) {
             navigator.serviceWorker.register('serviceWorker.js');
             console.log("Application registered");
         } else {
             console.log("Application not supported");
         }
-
     </script>
 </head>
 
 <body>
     <div class="container-fluid d-flex" id="main">
-        <nav class="navbar navbar-light bg-light w-100" id="nav-bar">
-            <a class="navbar-brand" href="#">
-                <img src="/src/assets/metropolia_s_orange.png" height="30" class="d-inline-block align-top" alt="">
-            </a>
-            <h3>Karamalmi</h3>
-        </nav>
         <div class="container" id="left">
             <div class="container d-flex" id="media">
                 <div class="container d-flex p-2" id="title" style="background-color: antiquewhite;">
@@ -43,7 +35,7 @@
                                 width="150px"></div>
                     </div>
                     <div class="container" id="campus">
-                        <h3>Karamalmi</h3>
+                        <h3>Karamalmin Kampus</h3>
                     </div>
                 </div>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -61,33 +53,33 @@
                 </div>
             </div>
             <div class="container h-25" id="info">
+                <h2>tiedotteita</h2>
                 <div id="info-list">
                     <div class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner" id="info-carousel">
-                            <div id="info-card">
-                                <div class="carousel-item active">
-                                    <div id="ww_ab6e53be154e7" v='1.3' loc='id' a='{"t":"horizontal","lang":"fi","sl_lpl":1,"ids":["wl3377"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Weather Data Source: <a href="https://wetterlabs.de/wetter_espoo/30_tage/" id="ww_ab6e53be154e7_u" target="_blank">wettervorhersage Espoo 30 tage</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_ab6e53be154e7"></script>
+                            <div class="carousel-item active">
+                                <div class="container info-card d-block w-100 h-100">
+                                    <h3>otsikko</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem adipisci,
+                                        iste incidunt tempora magni expedita! Quas distinctio reprehenderit inventore
+                                        quis sit nesciunt ullam, nulla, esse dolorum facilis quam quod saepe.</p>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container w-75" id="right">
-            <div class="container" id="food">
+            <div class="container h-50" id="food">
                 <h2 id="food-title">ruokalistat</h2>
                 <div id="food-list"></div>
             </div>
             <div class="container d-flex" id="transport">
                 <div class="container" id="bus">
-                    <h2>bussit</h2>
-                    <div id="hsl-data">
-                    </div>
+                    <h2>Bussi Aikataulut</h2>
+                    <div id="hsl-data"></div>
                 </div>
-                <!-- <div class="container" id="train">
-                    <h2>junat</h2>
-                </div> -->
             </div>
         </div>
     </div>
@@ -100,5 +92,4 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
