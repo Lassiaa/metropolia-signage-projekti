@@ -16,13 +16,15 @@ const getFood = async () => {
 };
 
 const renderFood = async () => {
+    let monthsFi = [
+        "tammikuu","helmikuu","maaliskuu","huhtikuu","toukokuu","kesäkuu","heinäkuu","elokuu","syyskuu","lokakuu","marraskuu","joulukuu"
+    ]
     let title = document.querySelector('#food-title');
     let foodList = document.querySelector('#food-list');
     //Tulostetaan ruokalista artikkelin otsikko, jossa näkyy päivämäärä.
     const date = new Date();
     let day = date.getDate();
-    let month = date.getMonth();
-    let monthText = date.toLocaleDateString('default', { month: 'long'});
+    let monthText = monthsFi[date.getMonth()];
     title.innerHTML = `ruokalista tänään ${day}. ${monthText}ta`;
     foodList.innerHTML = '';
     foodList.title = '';

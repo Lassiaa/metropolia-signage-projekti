@@ -11,6 +11,10 @@ renderFood();
 renderHslData();
 renderWeather();
 let s = false;
+let counter = 0;
+let container = document.querySelector('#hsl-data');
+let fcontainer = document.querySelector('#food-list');
+let icontainer = document.querySelector('#info-carousel');
 while(s == true){
     counter++;
     if (container.innerHTML == ""){
@@ -18,9 +22,6 @@ while(s == true){
     }
     if (fcontainer.innerHTML == ""){
         await renderFood();
-    }
-    if (wcontainer.innerHTML == ""){
-        await renderWeather();
     }
     if (icontainer.innerHTML == ""){
         await renderInfo();
@@ -32,18 +33,18 @@ while(s == true){
         s = true;
     }
 }
-// Get new menu and weather data every 50s
+// Get new menu and weather data every 1h
 const dataRefresh = window.setInterval(() => {
     renderFood();
     renderWeather();
-}, 50000);
+}, 3600000);
 
 // Get new info data every 50s
 const infoRefresh = window.setInterval(() => {
     renderInfo();
-}, 50000);
+}, 500000);
 
 // Get new HSL data every 5s
 const hslRefresh = window.setInterval(() => {
     renderHslData();
-}, 5000);
+}, 30000);
