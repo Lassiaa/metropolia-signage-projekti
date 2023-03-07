@@ -18,7 +18,10 @@ const renderWeather = async () => {
     const humidityDiv = document.querySelector('#weather-humidity');
     const windspeedDiv = document.querySelector('#weather-windspeed');
     const weatherDiv = document.querySelector('#weather-weather');
-    tempDiv,humidityDiv,windspeedDiv,weatherDiv.innerHTML = " ";
+    tempDiv.innerHTML = "";
+    humidityDiv.innerHTML = "";
+    windspeedDiv.innerHTML = "";
+    weatherDiv.innerHTML = "";
     const d = new Date();
     let hour = d.getHours();
     const obj = await getWeather();
