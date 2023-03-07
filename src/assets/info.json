@@ -1,27 +1,17 @@
 [
     {
         "id": 1,
-        "title": "EKA tiedote",
-        "text": "Moi tässä EKA tiedote"
+        "title": "METKA",
+        "text": "Onko opetuksessa epäkohtia? - Me autamme! www.metkaweb.fi"
     },
     {
         "id": 2,
-        "title": "tiedote 2",
-        "text": "Moi tässä tiedote 2"
+        "title": "Ohjattua ryhmäliikuntaa, palloilua, kursseja ja kuntosaleja",
+        "text": "Tutustu liikuntatarjontaamme ja tule mukaan liikkumaan! www.zonesports.fi"
     },
     {
         "id": 3,
-        "title": "jo kolmas tiedote",
-        "text": "Moi tässä jo tiedote 3!"
-    },
-    {
-        "id": 4,
-        "title": "4. tiedote",
-        "text": "ja vielä neljäs."
-    },
-    {
-        "id": 5,
-        "title": "toimiiko?",
-        "text": "toimii!!!!!"
+        "title": "3AMK - Opintotarjonta",
+        "text": "Haaga-Helian, Laurean ja Metropolian opiskelijana voit hyödyntää kaikkien kolmen ammattikorkeakoulun opintotarjontaa ja ilmoittautua valmiiksi suunniteltuihin osaamispolkuihin, jotka kehittävät uudenlaista ja tulevaisuuden työelämän tarpeisiin vastaavaa osaamista. 3amk.fk/opintotarjonta"
     }
 ]

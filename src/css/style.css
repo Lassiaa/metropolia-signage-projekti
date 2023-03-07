@@ -56,7 +56,6 @@ body {
     background-color: var(--trendGreen);
     align-content: center;
     background-color: white;
-    min-height: 300px;
     -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
@@ -84,13 +83,14 @@ body {
     align-items: center;
 }
 
-#info-list {
+#carousel-slide {
+    display: none;
     padding: 20px;
 }
 
 .info-card {
     padding: 5px;
-    background-color: bisque;
+    background-color: antiquewhite;
     text-align: center;
     min-height: 260px;
 }
