@@ -1,7 +1,10 @@
 'use strict';
 
-let currentDate = new Date().toISOString().slice(0, 10)
 
+/**
+ * 
+ * @returns JSON object Espoon säästä
+ */
 const getWeather = async () => {
     try {
         const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Espoo?include=fcst%2Cobs%2Chistfcst%2Cstats%2Cdays%2Chours%2Ccurrent%2Calerts&key=CZHNM8Y6A7KAP5UQ6ZQ4WLTRX&options=beta&contentType=json`;
@@ -13,6 +16,9 @@ const getWeather = async () => {
         console.error(err)
     }
 };
+/**
+ * Tulostaa sään sivulle fetchaamalla sen APIn kautta
+ */
 const renderWeather = async () => {
     const tempDiv = document.querySelector('#weather-temp');
     const humidityDiv = document.querySelector('#weather-humidity');

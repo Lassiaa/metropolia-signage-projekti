@@ -10,6 +10,7 @@ renderInfo();
 renderFood();
 renderHslData();
 renderWeather();
+//Varmistetaan että apit toimii aina
 let s = false;
 let counter = 0;
 let container = document.querySelector('#hsl-data');
