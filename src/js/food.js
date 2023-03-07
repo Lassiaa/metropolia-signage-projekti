@@ -33,7 +33,7 @@ const renderFood = async () => {
     const menu = foodContent.MenusForDays[0].SetMenus;
     for(let i = 0; i < menu.length; i++){
         for (let j = 0; j < menu[i].Components.length; j++) {
-        text += `<li>${menu[i].Components[j]}</li><br>`;
+        text += `<li>${menu[i].Components[j]}<br><p class="pricing">${menu[i].Price}</p></li>`;
         }
     }
     foodList.innerHTML += text;

@@ -10,7 +10,28 @@ renderInfo();
 renderFood();
 renderHslData();
 renderWeather();
-
+let s = false;
+while(s == true){
+    counter++;
+    if (container.innerHTML == ""){
+        await renderHslData();
+    }
+    if (fcontainer.innerHTML == ""){
+        await renderFood();
+    }
+    if (wcontainer.innerHTML == ""){
+        await renderWeather();
+    }
+    if (icontainer.innerHTML == ""){
+        await renderInfo();
+    }
+    if (container.innerHTML !== "" && fcontainer.innerHTML !== "" && wcontainer.innerHTML !== "" && icontainer.innerHTML !== ""){
+        s = true;
+    }
+    if (counter == 100){
+        s = true;
+    }
+}
 // Get new menu and weather data every 50s
 const dataRefresh = window.setInterval(() => {
     renderFood();
