@@ -59,19 +59,23 @@ body {
 
 #weather-card {
     display: flex;
-    flex-direction: column;
     background-image: linear-gradient(to right top, #136ab9, #0087ce, #00a3dd, #00bee6, #12d9eb);
+    justify-content: center;
+    flex-direction: row;
 }
 
 #weather-main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
 }
 
 #weather-additional {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
