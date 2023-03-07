@@ -1,7 +1,9 @@
 'use strict';
 
-let currentDate = new Date().toISOString().slice(0, 10)
-
+/**
+ * 
+ * @returns Json object jossa on metropolia karaportti ruokalista.
+ */
 const getFood = async () => {
     try {
         const url = `https://www.compass-group.fi/menuapi/feed/json?costNumber=3208&language=fi`;
@@ -14,7 +16,9 @@ const getFood = async () => {
         console.error(err)
     }
 };
-
+/**
+ * Tulostaa ruokalistan sivulle fetchaamalla sen APIsta.
+ */
 const renderFood = async () => {
 
     const monthsFi = ['tammikuu', 'helmikuu', 'maaliskuu', 'huhtikuu', 'toukokuu', 'kesäkuu', 'heinäkuu', 'elokuu', 'syyskuu', 'lokakuu', 'marraskuu', 'joulukuu'];
@@ -36,7 +40,7 @@ const renderFood = async () => {
     const menu = foodContent.MenusForDays[0].SetMenus;
     for(let i = 0; i < menu.length; i++){
         for (let j = 0; j < menu[i].Components.length; j++) {
-        text += `<li>${menu[i].Components[j]}</li><br>`;
+        text += `<li>${menu[i].Components[j]}<br><p class="pricing">${menu[i].Price}</p></li>`;
         }
     }
     foodList.innerHTML += text;
