@@ -23,7 +23,7 @@ const renderFood = async () => {
     let day = date.getDate();
     let month = date.getMonth();
     let monthText = date.toLocaleDateString('default', { month: 'long'});
-    title.innerHTML = `Ruokalista tänään ${day}. ${monthText}ta`;
+    title.innerHTML = `ruokalista tänään ${day}. ${monthText}ta`;
     foodList.innerHTML = '';
     foodList.title = '';
     let text = '';
