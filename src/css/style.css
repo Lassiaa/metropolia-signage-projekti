@@ -67,7 +67,7 @@ body {
 
 #weather-card {
     display: flex;
-    background-image: linear-gradient(to right top, #136ab9, #0087ce, #00a3dd, #00bee6, #12d9eb);
+    background-color: white;
     justify-content: center;
     flex-direction: row;
     padding: 2px;
@@ -159,7 +159,7 @@ h2 {
     color: var(--mainOrange) !important;
 }
 
-h2, h3 {
+h2, h3 ,h4{
     font-family: RobotoSlab;
     font-size: 2em !important;
 }
