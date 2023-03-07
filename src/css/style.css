@@ -115,7 +115,7 @@ body {
 #food {
     background-color: var(--secondaryYellow);
     margin-bottom: 35px;
-    padding: 25px;
+    padding: 20px;
     background-color: white;
     -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
@@ -132,7 +132,7 @@ body {
 
 #bus {
     background-color: white;
-    padding: 25px;
+    padding: 20px;
 
 }
 
@@ -159,10 +159,35 @@ h2 {
 
 h2, h3 {
     font-family: RobotoSlab;
-    font-size: 2.7em !important;
+    font-size: 2.2em !important;
 }
 
 p, li {
     font-family: OpenSans;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
+@media only screen and (max-width: 1400px) {
+    p,li {
+        font-size: 1em;
+    }
+    h2, h3 {
+        font-size: 2.1em !important;
+    }
+  }
+@media only screen and (max-width: 1280px) {
+    p,li {
+        font-size: 0.9em;
+    }
+    h2, h3 {
+        font-size: 2em !important;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    #food {
+        padding: 15px;
+    }
+    #bus {
+        padding: 15px;
+    }
+}
+  

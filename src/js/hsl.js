@@ -100,7 +100,7 @@ const renderHslData = async () => {
     hslArray.sort();
     enoughTimeArray.sort();
 
-    for (let i = 0; i < enoughTimeArray.length && i < 6; i++) {
+    for (let i = 0; i < enoughTimeArray.length && i < 4; i++) {
         text += `<li>` + '<strong>klo.</strong>' + enoughTimeArray[i] + `</li><br>`;
     }
     container.innerHTML += text;
