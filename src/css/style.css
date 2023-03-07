@@ -101,20 +101,22 @@ body {
 }
 
 #left {
-    margin: 15px;
+    display: grid;
+    margin: 35px;
     padding: 0px !important;
 }
 
 #right {
-    margin: 15px;
+    display: grid;
+    margin: 35px;
     padding: 0px !important;
 }
 
 #food {
     background-color: var(--secondaryYellow);
     margin-bottom: 35px;
+    padding: 25px;
     background-color: white;
-    min-height: 52%;
     -webkit-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 18px -12px rgba(0, 0, 0, 0.75);
@@ -130,6 +132,8 @@ body {
 
 #bus {
     background-color: white;
+    padding: 25px;
+
 }
 
 #bus {
@@ -155,8 +159,10 @@ h2 {
 
 h2, h3 {
     font-family: RobotoSlab;
+    font-size: 2.7em !important;
 }
 
 p, li {
     font-family: OpenSans;
+    font-size: 1.3em;
 }
