@@ -33,6 +33,10 @@ body {
     display: none !important;
 }
 
+.logo-container {
+    align-self: center;
+}
+
 #main {
     margin: auto;
     /*background-color: bisque;*/
