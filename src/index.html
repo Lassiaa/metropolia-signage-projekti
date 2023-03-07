@@ -17,27 +17,14 @@
     <script>
     // check broser support and register serviceWorker
     // This is done in script tags and not in a separate file so it would be done asap
-    const registerServiceWorker = async () => {
-        if ('serviceWorker' in navigator) {
-            try {
-                // register a new service worker
-                const registration = await navigator.serviceWorker.register('serviceWorker.js');
-                console.log('Service worker registered successfully:', registration.scope);
-                // clear any existing service workers
-                const registrations = await navigator.serviceWorker.getRegistrations();
-                for (let registration of registrations) {
-                    await registration.unregister();
-                }
-            } catch (error) {
-                console.log('Service worker registration failed:', error);
-            }
+    // check broser support
+        // register serviceWorker
+        if (navigator && navigator.serviceWorker) {
+            navigator.serviceWorker.register('serviceWorker.js');
+            console.log("Application registered");
         } else {
-                console.log('Service workers are not supported.');
+            console.log("Application not supported");
         }
-    };
-
-    registerServiceWorker();
-
     </script>
 </head>
 

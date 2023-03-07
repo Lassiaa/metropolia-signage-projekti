@@ -12,7 +12,6 @@ const coreAssets = [
   "./js/index.js",
   "./js/info.js",
   "./js/network.js",
-  "./js/ruokalistadata.js",
   "./js/weather.js",
   "./assets/icons/icon-32x32.png",
   "./assets/icons/icon-64x64.png",
